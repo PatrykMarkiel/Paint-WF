@@ -1,0 +1,17 @@
+E:\Github\Paint-WF\Paint\bin\Debug\net8.0-windows\Paint.exe
+E:\Github\Paint-WF\Paint\bin\Debug\net8.0-windows\Paint.deps.json
+E:\Github\Paint-WF\Paint\bin\Debug\net8.0-windows\Paint.runtimeconfig.json
+E:\Github\Paint-WF\Paint\bin\Debug\net8.0-windows\Paint.dll
+E:\Github\Paint-WF\Paint\bin\Debug\net8.0-windows\Paint.pdb
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.Form1.resources
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.Properties.Resources.resources
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.csproj.GenerateResource.cache
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.AssemblyInfoInputs.cache
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.AssemblyInfo.cs
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.csproj.CoreCompileInputs.cache
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.dll
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\refint\Paint.dll
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.pdb
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.genruntimeconfig.cache
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\ref\Paint.dll
