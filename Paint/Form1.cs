@@ -16,8 +16,11 @@ namespace Paint
         Point px, py;
         Pen p = new Pen(Color.Black, 1);
         Pen erase = new Pen(Color.White, 10);
-        int index;
+        int index = 1;
         int x, y, sX, sY, cX, cY;
+
+        ColorDialog cd = new ColorDialog();
+        Color new_color;
         private void button1_Click(object sender, EventArgs e)
         {
         }
@@ -116,6 +119,21 @@ namespace Paint
                     g.DrawLine(p, cX, cY, x, y);
                 }
             }
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
+            pic.Image = bm;
+            index = 1;
+        }
+
+        private void btn_color_Click(object sender, EventArgs e)
+        {
+            cd.ShowDialog();
+            new_color= cd.Color;
+            pic_color.BackColor = new_color;
+            p.Color = cd.Color;
         }
     }
 }

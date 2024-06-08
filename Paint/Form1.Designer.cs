@@ -37,9 +37,16 @@
             btn_fill = new Button();
             btn_color = new Button();
             pic_color = new Button();
+            menuStrip1 = new MenuStrip();
+            filleToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            newToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            clearToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             pic = new PictureBox();
             panel1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +61,7 @@
             panel1.Controls.Add(btn_fill);
             panel1.Controls.Add(btn_color);
             panel1.Controls.Add(pic_color);
+            panel1.Controls.Add(menuStrip1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -69,10 +77,11 @@
             btn_line.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_line.FlatStyle = FlatStyle.Flat;
             btn_line.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_line.Location = new Point(628, 21);
+            btn_line.Location = new Point(487, 27);
             btn_line.Name = "btn_line";
             btn_line.Size = new Size(27, 27);
             btn_line.TabIndex = 7;
+            btn_line.Text = "\\";
             btn_line.UseVisualStyleBackColor = false;
             btn_line.Click += btn_line_Click;
             // 
@@ -85,10 +94,11 @@
             btn_retangle.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_retangle.FlatStyle = FlatStyle.Flat;
             btn_retangle.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_retangle.Location = new Point(595, 54);
+            btn_retangle.Location = new Point(454, 27);
             btn_retangle.Name = "btn_retangle";
             btn_retangle.Size = new Size(27, 27);
             btn_retangle.TabIndex = 6;
+            btn_retangle.Text = "R";
             btn_retangle.UseVisualStyleBackColor = false;
             btn_retangle.Click += btn_retangle_Click;
             // 
@@ -101,10 +111,11 @@
             btn_elipse.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_elipse.FlatStyle = FlatStyle.Flat;
             btn_elipse.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_elipse.Location = new Point(595, 21);
+            btn_elipse.Location = new Point(421, 27);
             btn_elipse.Name = "btn_elipse";
             btn_elipse.Size = new Size(27, 27);
             btn_elipse.TabIndex = 5;
+            btn_elipse.Text = "E";
             btn_elipse.UseVisualStyleBackColor = false;
             btn_elipse.Click += btn_elipse_Click;
             // 
@@ -116,7 +127,7 @@
             btn_eraser.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_eraser.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_eraser.FlatStyle = FlatStyle.Flat;
-            btn_eraser.Location = new Point(529, 21);
+            btn_eraser.Location = new Point(355, 27);
             btn_eraser.Name = "btn_eraser";
             btn_eraser.Size = new Size(60, 60);
             btn_eraser.TabIndex = 4;
@@ -132,7 +143,7 @@
             btn_pencil.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_pencil.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_pencil.FlatStyle = FlatStyle.Flat;
-            btn_pencil.Location = new Point(463, 21);
+            btn_pencil.Location = new Point(289, 27);
             btn_pencil.Name = "btn_pencil";
             btn_pencil.Size = new Size(60, 60);
             btn_pencil.TabIndex = 3;
@@ -148,7 +159,7 @@
             btn_fill.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_fill.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_fill.FlatStyle = FlatStyle.Flat;
-            btn_fill.Location = new Point(397, 21);
+            btn_fill.Location = new Point(223, 27);
             btn_fill.Name = "btn_fill";
             btn_fill.Size = new Size(60, 60);
             btn_fill.TabIndex = 2;
@@ -163,22 +174,64 @@
             btn_color.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_color.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_color.FlatStyle = FlatStyle.Flat;
-            btn_color.Location = new Point(331, 21);
+            btn_color.Location = new Point(157, 27);
             btn_color.Name = "btn_color";
             btn_color.Size = new Size(60, 60);
             btn_color.TabIndex = 1;
             btn_color.Text = "Color";
             btn_color.UseVisualStyleBackColor = false;
+            btn_color.Click += btn_color_Click;
             // 
             // pic_color
             // 
-            pic_color.BackColor = Color.White;
-            pic_color.Location = new Point(265, 21);
+            pic_color.BackColor = Color.Black;
+            pic_color.Location = new Point(91, 27);
             pic_color.Name = "pic_color";
             pic_color.Size = new Size(60, 60);
             pic_color.TabIndex = 0;
             pic_color.UseVisualStyleBackColor = false;
             pic_color.Click += button1_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { filleToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1695, 24);
+            menuStrip1.TabIndex = 8;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // filleToolStripMenuItem
+            // 
+            filleToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem, newToolStripMenuItem, openToolStripMenuItem, clearToolStripMenuItem });
+            filleToolStripMenuItem.Name = "filleToolStripMenuItem";
+            filleToolStripMenuItem.Size = new Size(40, 20);
+            filleToolStripMenuItem.Text = "Fille";
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(103, 22);
+            saveToolStripMenuItem.Text = "Save";
+            // 
+            // newToolStripMenuItem
+            // 
+            newToolStripMenuItem.Name = "newToolStripMenuItem";
+            newToolStripMenuItem.Size = new Size(103, 22);
+            newToolStripMenuItem.Text = "New";
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Text = "Open";
+            // 
+            // clearToolStripMenuItem
+            // 
+            clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            clearToolStripMenuItem.Size = new Size(103, 22);
+            clearToolStripMenuItem.Text = "Clear";
+            clearToolStripMenuItem.Click += clearToolStripMenuItem_Click;
             // 
             // panel2
             // 
@@ -211,9 +264,13 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pic);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
             ResumeLayout(false);
         }
@@ -231,5 +288,11 @@
         private Button btn_elipse;
         private Button btn_retangle;
         private Button btn_line;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem filleToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private ToolStripMenuItem newToolStripMenuItem;
+        private ToolStripMenuItem openToolStripMenuItem;
+        private ToolStripMenuItem clearToolStripMenuItem;
     }
 }
