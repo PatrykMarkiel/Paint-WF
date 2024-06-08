@@ -15,3 +15,4 @@ E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\refint\Paint.dll
 E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.pdb
 E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.genruntimeconfig.cache
 E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\ref\Paint.dll
+E:\Github\Paint-WF\Paint\obj\Debug\net8.0-windows\Paint.sourcelink.json

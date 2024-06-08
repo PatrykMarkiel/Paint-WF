@@ -57,7 +57,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1627, 100);
+            panel1.Size = new Size(1695, 100);
             panel1.TabIndex = 0;
             // 
             // btn_line
@@ -74,6 +74,7 @@
             btn_line.Size = new Size(27, 27);
             btn_line.TabIndex = 7;
             btn_line.UseVisualStyleBackColor = false;
+            btn_line.Click += btn_line_Click;
             // 
             // btn_retangle
             // 
@@ -89,6 +90,7 @@
             btn_retangle.Size = new Size(27, 27);
             btn_retangle.TabIndex = 6;
             btn_retangle.UseVisualStyleBackColor = false;
+            btn_retangle.Click += btn_retangle_Click;
             // 
             // btn_elipse
             // 
@@ -104,6 +106,7 @@
             btn_elipse.Size = new Size(27, 27);
             btn_elipse.TabIndex = 5;
             btn_elipse.UseVisualStyleBackColor = false;
+            btn_elipse.Click += btn_elipse_Click;
             // 
             // btn_eraser
             // 
@@ -119,6 +122,7 @@
             btn_eraser.TabIndex = 4;
             btn_eraser.Text = "eraser";
             btn_eraser.UseVisualStyleBackColor = false;
+            btn_eraser.Click += btn_eraser_Click;
             // 
             // btn_pencil
             // 
@@ -180,9 +184,9 @@
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 987);
+            panel2.Location = new Point(0, 1016);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1627, 19);
+            panel2.Size = new Size(1695, 19);
             panel2.TabIndex = 1;
             // 
             // pic
@@ -191,9 +195,10 @@
             pic.BackColor = SystemColors.ButtonHighlight;
             pic.Location = new Point(0, 0);
             pic.Name = "pic";
-            pic.Size = new Size(1627, 1006);
+            pic.Size = new Size(1695, 1035);
             pic.TabIndex = 2;
             pic.TabStop = false;
+            pic.Paint += pic_Paint;
             pic.MouseDown += pic_MouseDown;
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
@@ -202,7 +207,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1627, 1006);
+            ClientSize = new Size(1695, 1035);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pic);
