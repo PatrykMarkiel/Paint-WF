@@ -135,10 +135,18 @@ namespace Paint
             pic_color.BackColor = new_color;
             p.Color = cd.Color;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        static Point set_point(PictureBox pb, Point pt)
         {
-
+            float pX = 1f * pb.Width / pb.Width;
+            float pY = 1f* pb.Height/ pb.Height;
+            return new Point((int)(pt.X*pX),(int)(pt.Y*pX));
+        }
+        private void color_picker_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point point= set_point(color_picker, e.Location);
+            pic_color.BackColor=((Bitmap)color_picker.BackgroundImage).GetPixel(point.X, point.Y);
+            new_color = pic_color.BackColor;
+            p.Color = pic_color.BackColor;
         }
     }
 }

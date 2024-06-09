@@ -46,11 +46,11 @@
             clearToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             pic = new PictureBox();
-            pictureBox1 = new PictureBox();
+            color_picker = new PictureBox();
             panel1.SuspendLayout();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -65,7 +65,7 @@
             panel1.Controls.Add(btn_color);
             panel1.Controls.Add(pic_color);
             panel1.Controls.Add(menuStrip1);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(color_picker);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -260,15 +260,15 @@
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
             // 
-            // pictureBox1
+            // color_picker
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(12, -91);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(753, 210);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            color_picker.BackgroundImage = (Image)resources.GetObject("color_picker.BackgroundImage");
+            color_picker.Location = new Point(12, -93);
+            color_picker.Name = "color_picker";
+            color_picker.Size = new Size(751, 238);
+            color_picker.TabIndex = 9;
+            color_picker.TabStop = false;
+            color_picker.MouseClick += color_picker_MouseClick;
             // 
             // Form1
             // 
@@ -286,7 +286,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)color_picker).EndInit();
             ResumeLayout(false);
         }
 
@@ -309,6 +309,6 @@
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem clearToolStripMenuItem;
-        private PictureBox pictureBox1;
+        private PictureBox color_picker;
     }
 }
