@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "E:\\Github\\Paint-WF\\Paint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|E:\\Github\\Paint-WF\\Paint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|e:\\github\\paint-wf\\paint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|e:\\github\\paint-wf\\paint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|E:\\Github\\Paint-WF\\Paint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE83AC78-CFE4-49A4-BE75-253EC8F593C7}|Paint.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\Github\\Paint-WF\\Paint\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAqwIcAAAAfAAAA",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAhwIAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T11:16:13.978Z",
               "EditorCaption": ""

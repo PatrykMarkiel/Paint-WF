@@ -131,9 +131,14 @@ namespace Paint
         private void btn_color_Click(object sender, EventArgs e)
         {
             cd.ShowDialog();
-            new_color= cd.Color;
+            new_color = cd.Color;
             pic_color.BackColor = new_color;
             p.Color = cd.Color;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

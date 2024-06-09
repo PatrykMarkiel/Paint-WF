@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             btn_line = new Button();
             btn_retangle = new Button();
@@ -45,9 +46,11 @@
             clearToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             pic = new PictureBox();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -62,10 +65,11 @@
             panel1.Controls.Add(btn_color);
             panel1.Controls.Add(pic_color);
             panel1.Controls.Add(menuStrip1);
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1695, 100);
+            panel1.Size = new Size(1695, 122);
             panel1.TabIndex = 0;
             // 
             // btn_line
@@ -77,7 +81,7 @@
             btn_line.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_line.FlatStyle = FlatStyle.Flat;
             btn_line.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_line.Location = new Point(487, 27);
+            btn_line.Location = new Point(1167, 46);
             btn_line.Name = "btn_line";
             btn_line.Size = new Size(27, 27);
             btn_line.TabIndex = 7;
@@ -94,7 +98,7 @@
             btn_retangle.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_retangle.FlatStyle = FlatStyle.Flat;
             btn_retangle.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_retangle.Location = new Point(454, 27);
+            btn_retangle.Location = new Point(1134, 46);
             btn_retangle.Name = "btn_retangle";
             btn_retangle.Size = new Size(27, 27);
             btn_retangle.TabIndex = 6;
@@ -111,7 +115,7 @@
             btn_elipse.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_elipse.FlatStyle = FlatStyle.Flat;
             btn_elipse.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 1, true);
-            btn_elipse.Location = new Point(421, 27);
+            btn_elipse.Location = new Point(1101, 46);
             btn_elipse.Name = "btn_elipse";
             btn_elipse.Size = new Size(27, 27);
             btn_elipse.TabIndex = 5;
@@ -127,7 +131,7 @@
             btn_eraser.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_eraser.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_eraser.FlatStyle = FlatStyle.Flat;
-            btn_eraser.Location = new Point(355, 27);
+            btn_eraser.Location = new Point(1035, 46);
             btn_eraser.Name = "btn_eraser";
             btn_eraser.Size = new Size(60, 60);
             btn_eraser.TabIndex = 4;
@@ -143,7 +147,7 @@
             btn_pencil.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_pencil.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_pencil.FlatStyle = FlatStyle.Flat;
-            btn_pencil.Location = new Point(289, 27);
+            btn_pencil.Location = new Point(969, 46);
             btn_pencil.Name = "btn_pencil";
             btn_pencil.Size = new Size(60, 60);
             btn_pencil.TabIndex = 3;
@@ -159,7 +163,7 @@
             btn_fill.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_fill.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_fill.FlatStyle = FlatStyle.Flat;
-            btn_fill.Location = new Point(223, 27);
+            btn_fill.Location = new Point(903, 46);
             btn_fill.Name = "btn_fill";
             btn_fill.Size = new Size(60, 60);
             btn_fill.TabIndex = 2;
@@ -174,7 +178,7 @@
             btn_color.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btn_color.FlatAppearance.MouseOverBackColor = Color.Silver;
             btn_color.FlatStyle = FlatStyle.Flat;
-            btn_color.Location = new Point(157, 27);
+            btn_color.Location = new Point(837, 46);
             btn_color.Name = "btn_color";
             btn_color.Size = new Size(60, 60);
             btn_color.TabIndex = 1;
@@ -185,7 +189,7 @@
             // pic_color
             // 
             pic_color.BackColor = Color.Black;
-            pic_color.Location = new Point(91, 27);
+            pic_color.Location = new Point(771, 46);
             pic_color.Name = "pic_color";
             pic_color.Size = new Size(60, 60);
             pic_color.TabIndex = 0;
@@ -256,6 +260,16 @@
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(12, -91);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(753, 210);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -272,6 +286,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -294,5 +309,6 @@
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem clearToolStripMenuItem;
+        private PictureBox pictureBox1;
     }
 }
