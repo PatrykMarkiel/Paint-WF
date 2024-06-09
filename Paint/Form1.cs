@@ -138,15 +138,74 @@ namespace Paint
         static Point set_point(PictureBox pb, Point pt)
         {
             float pX = 1f * pb.Width / pb.Width;
-            float pY = 1f* pb.Height/ pb.Height;
-            return new Point((int)(pt.X*pX),(int)(pt.Y*pX));
+            float pY = 1f * pb.Height / pb.Height;
+            return new Point((int)(pt.X * pX), (int)(pt.Y * pX));
         }
         private void color_picker_MouseClick(object sender, MouseEventArgs e)
         {
-            Point point= set_point(color_picker, e.Location);
-            pic_color.BackColor=((Bitmap)color_picker.BackgroundImage).GetPixel(point.X, point.Y);
+            Point point = set_point(color_picker, e.Location);
+            pic_color.BackColor = ((Bitmap)color_picker.BackgroundImage).GetPixel(point.X, point.Y);
             new_color = pic_color.BackColor;
             p.Color = pic_color.BackColor;
+        }
+        private void validate(Bitmap bm, Stack<Point> sp, int x, int y, Color old_color, Color new_color)
+        {
+            if (x >= 0 && x < bm.Width && y >= 0 && y < bm.Height)
+            {
+                Color cx = bm.GetPixel(x, y);
+                if (cx == old_color)
+                {
+                    sp.Push(new Point(x, y));
+                    bm.SetPixel(x, y, new_color);
+                }
+            }
+        }
+
+        public void Fill(Bitmap bm, int x, int y, Color new_clr)
+        {
+            Color old_color = bm.GetPixel(x, y);
+            if (old_color == new_clr)
+            {
+                return;
+            }
+
+            Stack<Point> pixel = new Stack<Point>();
+            pixel.Push(new Point(x, y));
+            bm.SetPixel(x, y, new_clr);
+
+            while (pixel.Count > 0)
+            {
+                Point pt = (Point)pixel.Pop();
+                validate(bm, pixel, pt.X - 1, pt.Y, old_color, new_clr);
+                validate(bm, pixel, pt.X, pt.Y - 1, old_color, new_clr);
+                validate(bm, pixel, pt.X + 1, pt.Y, old_color, new_clr);
+                validate(bm, pixel, pt.X, pt.Y + 1, old_color, new_clr);
+            }
+        }
+
+        private void pic_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (index == 7)
+            {
+                Point point = set_point(pic, e.Location);
+                Fill(bm, point.X, point.Y, new_color);
+            }
+        }
+
+        private void btn_fill_Click(object sender, EventArgs e)
+        {
+            index = 7;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Image(&.jpg)|*.jpg|*.*|*.*";
+            if(sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap btm = bm.Clone(new Rectangle(0,0, pic.Width,pic.Height),bm.PixelFormat);
+                btm.Save(sfd.FileName); 
+            }
         }
     }
 }

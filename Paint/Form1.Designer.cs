@@ -44,13 +44,13 @@
             newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             clearToolStripMenuItem = new ToolStripMenuItem();
+            color_picker = new PictureBox();
             panel2 = new Panel();
             pic = new PictureBox();
-            color_picker = new PictureBox();
             panel1.SuspendLayout();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -169,6 +169,7 @@
             btn_fill.TabIndex = 2;
             btn_fill.Text = "Fill";
             btn_fill.UseVisualStyleBackColor = false;
+            btn_fill.Click += btn_fill_Click;
             // 
             // btn_color
             // 
@@ -215,27 +216,38 @@
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(103, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(103, 22);
+            newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "Open";
             // 
             // clearToolStripMenuItem
             // 
             clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            clearToolStripMenuItem.Size = new Size(103, 22);
+            clearToolStripMenuItem.Size = new Size(180, 22);
             clearToolStripMenuItem.Text = "Clear";
             clearToolStripMenuItem.Click += clearToolStripMenuItem_Click;
+            // 
+            // color_picker
+            // 
+            color_picker.BackgroundImage = (Image)resources.GetObject("color_picker.BackgroundImage");
+            color_picker.Location = new Point(12, -93);
+            color_picker.Name = "color_picker";
+            color_picker.Size = new Size(751, 238);
+            color_picker.TabIndex = 9;
+            color_picker.TabStop = false;
+            color_picker.MouseClick += color_picker_MouseClick;
             // 
             // panel2
             // 
@@ -256,19 +268,10 @@
             pic.TabIndex = 2;
             pic.TabStop = false;
             pic.Paint += pic_Paint;
+            pic.MouseClick += pic_MouseClick;
             pic.MouseDown += pic_MouseDown;
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
-            // 
-            // color_picker
-            // 
-            color_picker.BackgroundImage = (Image)resources.GetObject("color_picker.BackgroundImage");
-            color_picker.Location = new Point(12, -93);
-            color_picker.Name = "color_picker";
-            color_picker.Size = new Size(751, 238);
-            color_picker.TabIndex = 9;
-            color_picker.TabStop = false;
-            color_picker.MouseClick += color_picker_MouseClick;
             // 
             // Form1
             // 
@@ -285,8 +288,8 @@
             panel1.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pic).EndInit();
             ((System.ComponentModel.ISupportInitialize)color_picker).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic).EndInit();
             ResumeLayout(false);
         }
 
